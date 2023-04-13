@@ -5,7 +5,8 @@
 //#include <windows.ui.xaml.navigation.h>
 #endif
 
-#include "SettingsPage.xaml.h"
+//#include "SettingsPage.xaml.h"
+//#include "Calendar.xaml.h"
 
 #include <winrt/Windows.UI.Xaml.Interop.h>
 
