@@ -27,4 +27,5 @@ namespace winrt::DairyApp::implementation
         throw hresult_not_implemented();
     }
 
+    ///
 }

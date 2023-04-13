@@ -19,5 +19,5 @@ namespace winrt::DairyApp::factory_implementation
 {
     struct Calendar : CalendarT<Calendar, implementation::Calendar>
     {
-    };
+    };//
 }
