@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="DairyApp.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DairyApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10, 10, 0, 10">
+        <CheckBox Content="Two-state CheckBox1"
+          Checked="TwoState_Checked1"
+          Unchecked="TwoState_Unchecked1" />
+        <CheckBox Content="Two-state CheckBox2"
+          Checked="TwoState_Checked2"
+          Unchecked="TwoState_Unchecked2" />
+        <CheckBox Content="Two-state CheckBox3"
+          Checked="TwoState_Checked3"
+          Unchecked="TwoState_Unchecked3" />
+        <!--<Button x:Name="My_button" Content="button"></Button>-->
+    </StackPanel>
+</Page>
