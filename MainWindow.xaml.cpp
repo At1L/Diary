@@ -46,7 +46,7 @@ void winrt::DairyApp::implementation::MainWindow::NavigationView_ItemInvoked(win
         }
 
     }
-   /* else
+    else
     {
         winrt:Windows::UI::Xaml::Interop::TypeName typeName;
         typeName.Name = winrt::unbox_value<winrt::hstring>(args.InvokedItemContainer().Tag());
@@ -55,5 +55,5 @@ void winrt::DairyApp::implementation::MainWindow::NavigationView_ItemInvoked(win
         {
             contentFrame().Navigate(typeName, nullptr);
         }
-    }*/
+    }
 }
