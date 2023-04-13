@@ -1,0 +1,10 @@
+namespace DairyApp
+{
+    [default_interface]
+    runtimeclass Calendar : Microsoft.UI.Xaml.Controls.Page
+    {
+        Calendar();
+        Int32 MyProperty;
+    }
+}
+//
