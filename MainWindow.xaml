@@ -20,7 +20,7 @@
     ItemInvoked="NavigationView_ItemInvoked">
 
         <NavigationView.MenuItems>
-            <NavigationViewItem Content="Calendar" Tag="SamplePage1" x:Name="SamplePage1Item">
+            <NavigationViewItem Content="Calendar" Tag="DairyApp.Calendar" x:Name="SamplePage1Item">
                 <NavigationViewItem.Icon>
                     <SymbolIcon Symbol="Calendar" />
                 </NavigationViewItem.Icon>
