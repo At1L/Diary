@@ -1,0 +1,9 @@
+namespace DairyApp
+{
+    [default_interface]
+    runtimeclass TaskPage : Microsoft.UI.Xaml.Controls.Page
+    {
+        TaskPage();
+        Int32 MyProperty;
+    }
+}
