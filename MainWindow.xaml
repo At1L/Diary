@@ -25,12 +25,12 @@
                     <SymbolIcon Symbol="Calendar" />
                 </NavigationViewItem.Icon>
             </NavigationViewItem>
-            <NavigationViewItemHeader Content="Add Later"/>
-            <NavigationViewItem Content="Not done yet" Tag="SamplePage2" x:Name="SamplePage2Item" SelectsOnInvoked="True">
+            <NavigationViewItem Content="Tasks" Tag="DairyApp.TaskPage" x:Name="SamplePage2Item" >
                 <NavigationViewItem.Icon>
-                    <SymbolIcon Symbol="Cancel" />
+                    <SymbolIcon Symbol="Accept"/>
                 </NavigationViewItem.Icon>
             </NavigationViewItem>
+            <NavigationViewItemHeader Content="Add Later"/>
             <NavigationViewItem Content="Not done yet" Tag="SamplePage3" x:Name="SamplePage3Item">
                 <NavigationViewItem.Icon>
                     <SymbolIcon Symbol="Cancel" />
