@@ -11,7 +11,7 @@
     IsSettingsVisible="True"
     IsBackButtonVisible="Auto"
     IsBackEnabled="False"
-    Header="Header"
+    Header="Dairy"
     AlwaysShowHeader="True"
     PaneTitle="Pane Title"
     ExpandedModeThresholdWidth="500"
@@ -30,16 +30,38 @@
                     <SymbolIcon Symbol="Accept"/>
                 </NavigationViewItem.Icon>
             </NavigationViewItem>
-            <NavigationViewItemHeader Content="Add Later"/>
-            <NavigationViewItem Content="Not done yet" Tag="SamplePage3" x:Name="SamplePage3Item">
-                <NavigationViewItem.Icon>
-                    <SymbolIcon Symbol="Cancel" />
-                </NavigationViewItem.Icon>
-            </NavigationViewItem>
         </NavigationView.MenuItems>
 
         <NavigationView.PaneCustomContent>
-            <HyperlinkButton x:Name="PaneHyperlink" Content="More info" Margin="12,0" Visibility="Collapsed" />
+
+            <Button HorizontalAlignment="Center" Width="400">
+                <HyperlinkButton  Content="Weather" NavigateUri="https://yandex.ru/pogoda">
+                    <HyperlinkButton.Resources>
+                        <ResourceDictionary>
+                            <ResourceDictionary.ThemeDictionaries>
+                                <ResourceDictionary x:Key="Dark">
+                                    <SolidColorBrush x:Key="HyperlinkButtonForeground" Color="White"/>
+                                    <SolidColorBrush x:Key="HyperlinkButtonForegroundPointerOver" Color="GhostWhite"/>
+                                </ResourceDictionary>
+                            </ResourceDictionary.ThemeDictionaries>
+                        </ResourceDictionary>
+                    </HyperlinkButton.Resources>
+                    <HyperlinkButton.ContentTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}" />
+                        </DataTemplate>
+                    </HyperlinkButton.ContentTemplate>
+                </HyperlinkButton>
+                <Button.Resources>
+                    <ResourceDictionary>
+                        <ResourceDictionary.ThemeDictionaries>
+                            <ResourceDictionary x:Key="Dark">
+                                <SolidColorBrush x:Key="ButtonBackground" Color="#1F1F1F"/>
+                            </ResourceDictionary>
+                        </ResourceDictionary.ThemeDictionaries>
+                    </ResourceDictionary>
+                </Button.Resources>
+            </Button>
         </NavigationView.PaneCustomContent>
 
         <NavigationView.AutoSuggestBox>
