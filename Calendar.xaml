@@ -8,7 +8,7 @@
     mc:Ignorable="d">
 
     <StackPanel>
-        <CalendarView Width="1500" Height="950" VerticalAlignment="Center" Margin="50 0 50 0 " Background="#373a4b"
+        <CalendarView Width="1500" Height="900" VerticalAlignment="Center" Margin="50 0 50 0 " Background="#373a4b"
             SelectionMode="Multiple"
     IsGroupLabelVisible="True"
     IsOutOfScopeEnabled="True"
