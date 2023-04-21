@@ -7,5 +7,23 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+            <CommandBar Background="Transparent" IsOpen="False" DefaultLabelPosition="Right" IsSticky="True" >
+                <AppBarButton Icon="Add" Label="Add" Click="AppBarButton_Click"/>
+                <AppBarButton Icon="Edit" Label="Edit"/>
+                <AppBarButton Icon="Share" Label="Share"/>
+                <CommandBar.SecondaryCommands>
+                    <AppBarButton Icon="Setting" Label="Settings">
+                        <AppBarButton.KeyboardAccelerators>
+                            <KeyboardAccelerator Modifiers="Control" Key="I" />
+                        </AppBarButton.KeyboardAccelerators>
+                    </AppBarButton>
+                </CommandBar.SecondaryCommands>
+            </CommandBar>
+        </StackPanel>
+        <StackPanel Orientation="Vertical">
+            <TextBox x:Name="Txt" HorizontalAlignment="Left"/>
+            <TextBox x:Name="Txt2" HorizontalAlignment="Left"/>
+        </StackPanel>
     </StackPanel>
 </Page>
