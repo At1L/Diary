@@ -12,17 +12,18 @@
     IsBackButtonVisible="Auto"
     IsBackEnabled="False"
     Header="Dairy"
-    AlwaysShowHeader="True"
-    PaneTitle="Pane Title"
+    AlwaysShowHeader="False"
+    PaneTitle=""
     ExpandedModeThresholdWidth="500"
     SelectionFollowsFocus="Disabled"
     IsTabStop="False"
-    ItemInvoked="NavigationView_ItemInvoked">
-
+    ItemInvoked="NavigationView_ItemInvoked"
+                    Background="#242424">
+        
         <NavigationView.MenuItems>
             <NavigationViewItem Content="Weather" Tag="DairyApp.Weather" x:Name="SamplePage4Item" >
                 <NavigationViewItem.Icon>
-                    <SymbolIcon Symbol="Up"/>
+                    <SymbolIcon Symbol="Globe"/>
                 </NavigationViewItem.Icon>
             </NavigationViewItem>
             <NavigationViewItem Content="Calendar" Tag="DairyApp.Calendar" x:Name="SamplePage1Item">
@@ -39,9 +40,7 @@
         
 
 
-        <NavigationView.AutoSuggestBox>
-            <AutoSuggestBox QueryIcon="Find" AutomationProperties.Name="Search" Visibility="Visible"/>
-        </NavigationView.AutoSuggestBox>
+        
 
         <NavigationView.FooterMenuItems>
             <NavigationViewItem Content="User" Tag="DairyApp.User" x:Name="SamplePage3Item">
