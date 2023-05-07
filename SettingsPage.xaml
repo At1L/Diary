@@ -7,16 +7,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10, 10, 0, 10">
-        <CheckBox Content="Two-state CheckBox1"
-          Checked="TwoState_Checked1"
-          Unchecked="TwoState_Unchecked1" />
-        <CheckBox Content="Two-state CheckBox2"
-          Checked="TwoState_Checked2"
-          Unchecked="TwoState_Unchecked2" />
-        <CheckBox Content="Two-state CheckBox3"
-          Checked="TwoState_Checked3"
-          Unchecked="TwoState_Unchecked3" />
-        <!--<Button x:Name="My_button" Content="button"></Button>-->
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        
+        
     </StackPanel>
+
 </Page>
