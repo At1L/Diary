@@ -11,7 +11,6 @@
 
 using namespace winrt;
 using namespace Microsoft::UI::Xaml;
-using namespace winrt::DairyApp::implementation;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -35,7 +34,7 @@ namespace winrt::DairyApp::implementation
 
 std::vector <std::string> UserTask;
 
-void TaskPage::AppBarButton_Click(Windows::Foundation::IInspectable const& sender, RoutedEventArgs const& e)
+void winrt::DairyApp::implementation::TaskPage::AppBarButton_Click(Windows::Foundation::IInspectable const& sender, RoutedEventArgs const& e)
 {
     //Txt2().Text(to_hstring(""));
     std::string s = to_string(Txt().Text());
