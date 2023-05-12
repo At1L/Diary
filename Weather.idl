@@ -1,0 +1,9 @@
+namespace DairyApp
+{
+    [default_interface]
+    runtimeclass Weather : Microsoft.UI.Xaml.Controls.Page
+    {
+        Weather();
+        Int32 MyProperty;
+    }
+}

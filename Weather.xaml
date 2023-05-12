@@ -1,15 +1,11 @@
 ﻿<Page
-    x:Class="DairyApp.SettingsPage"
+    x:Class="DairyApp.Weather"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:DairyApp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
-    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-        
-        
-    </StackPanel>
+    <WebView2 x:Name="MyWebView2" Source="https://yandex.ru/pogoda/" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" MinHeight="200" MinWidth="200"/>
 
 </Page>

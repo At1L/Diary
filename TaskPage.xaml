@@ -6,24 +6,22 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    <StackPanel>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-            <CommandBar Background="Transparent" IsOpen="False" DefaultLabelPosition="Right" IsSticky="True" >
-                <AppBarButton Icon="Add" Label="Add" Click="AppBarButton_Click"/>
-                <AppBarButton Icon="Edit" Label="Edit"/>
-                <AppBarButton Icon="Share" Label="Share"/>
-                <CommandBar.SecondaryCommands>
-                    <AppBarButton Icon="Setting" Label="Settings">
-                        <AppBarButton.KeyboardAccelerators>
-                            <KeyboardAccelerator Modifiers="Control" Key="I" />
-                        </AppBarButton.KeyboardAccelerators>
-                    </AppBarButton>
-                </CommandBar.SecondaryCommands>
-            </CommandBar>
-        </StackPanel>
-        <StackPanel Orientation="Vertical">
-            <TextBox x:Name="Txt" HorizontalAlignment="Left"/>
-            <TextBox x:Name="Txt2" HorizontalAlignment="Left"/>
-        </StackPanel>
+
+    
+
+    <StackPanel Background="AliceBlue">
+        <Button Content="Change" Click="OnButtonClickChange" Background="AliceBlue"/>
+
+        <ListView ItemsSource="{x:Bind Contacts}">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:Contact">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{x:Bind Path=FirstName, Mode=TwoWay}" Margin="0,0,5,0"/>
+                        <TextBlock Text="{x:Bind Path=LastName, Mode=TwoWay}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </StackPanel>
+
 </Page>

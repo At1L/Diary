@@ -12,14 +12,20 @@
     IsBackButtonVisible="Auto"
     IsBackEnabled="False"
     Header="Dairy"
-    AlwaysShowHeader="True"
-    PaneTitle="Pane Title"
+    AlwaysShowHeader="False"
+    PaneTitle=""
     ExpandedModeThresholdWidth="500"
     SelectionFollowsFocus="Disabled"
     IsTabStop="False"
-    ItemInvoked="NavigationView_ItemInvoked">
-
+    ItemInvoked="NavigationView_ItemInvoked"
+                    Background="#242424">
+        
         <NavigationView.MenuItems>
+            <NavigationViewItem Content="Weather" Tag="DairyApp.Weather" x:Name="SamplePage4Item" >
+                <NavigationViewItem.Icon>
+                    <SymbolIcon Symbol="Globe"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
             <NavigationViewItem Content="Calendar" Tag="DairyApp.Calendar" x:Name="SamplePage1Item">
                 <NavigationViewItem.Icon>
                     <SymbolIcon Symbol="Calendar" />
@@ -31,49 +37,18 @@
                 </NavigationViewItem.Icon>
             </NavigationViewItem>
         </NavigationView.MenuItems>
+        
 
-        <NavigationView.PaneCustomContent>
 
-            <Button HorizontalAlignment="Center" Width="400">
-                <HyperlinkButton  Content="Weather" NavigateUri="https://yandex.ru/pogoda">
-                    <HyperlinkButton.Resources>
-                        <ResourceDictionary>
-                            <ResourceDictionary.ThemeDictionaries>
-                                <ResourceDictionary x:Key="Dark">
-                                    <SolidColorBrush x:Key="HyperlinkButtonForeground" Color="White"/>
-                                    <SolidColorBrush x:Key="HyperlinkButtonForegroundPointerOver" Color="GhostWhite"/>
-                                </ResourceDictionary>
-                            </ResourceDictionary.ThemeDictionaries>
-                        </ResourceDictionary>
-                    </HyperlinkButton.Resources>
-                    <HyperlinkButton.ContentTemplate>
-                        <DataTemplate>
-                            <TextBlock Text="{Binding}" />
-                        </DataTemplate>
-                    </HyperlinkButton.ContentTemplate>
-                </HyperlinkButton>
-                <Button.Resources>
-                    <ResourceDictionary>
-                        <ResourceDictionary.ThemeDictionaries>
-                            <ResourceDictionary x:Key="Dark">
-                                <SolidColorBrush x:Key="ButtonBackground" Color="#1F1F1F"/>
-                            </ResourceDictionary>
-                        </ResourceDictionary.ThemeDictionaries>
-                    </ResourceDictionary>
-                </Button.Resources>
-            </Button>
-        </NavigationView.PaneCustomContent>
+        
 
-        <NavigationView.AutoSuggestBox>
-            <AutoSuggestBox QueryIcon="Find" AutomationProperties.Name="Search" Visibility="Collapsed"/>
-        </NavigationView.AutoSuggestBox>
-
-        <NavigationView.PaneFooter>
-            <StackPanel x:Name="FooterStackPanel" Orientation="Vertical" Visibility="Collapsed">
-                <NavigationViewItem Icon="Download" AutomationProperties.Name="download" />
-                <NavigationViewItem Icon="Favorite" AutomationProperties.Name="favorite" />
-            </StackPanel>
-        </NavigationView.PaneFooter>
+        <NavigationView.FooterMenuItems>
+            <NavigationViewItem Content="User" Tag="DairyApp.User" x:Name="SamplePage3Item">
+                <NavigationViewItem.Icon>
+                    <SymbolIcon Symbol="Contact" />
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+        </NavigationView.FooterMenuItems>
 
         <Frame x:Name="contentFrame" />
     </NavigationView>
