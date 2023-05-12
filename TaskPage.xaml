@@ -6,67 +6,21 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    <!-- #242424 #1F1F1F -->
+    
 
+    <StackPanel Background="AliceBlue">
+        <Button Content="Change" Click="OnButtonClickChange" Background="AliceBlue"/>
 
-    <StackPanel VerticalAlignment="Center">
-        <StackPanel HorizontalAlignment="Right">
-            <Button HorizontalAlignment="Center" Width="400">
-                <HyperlinkButton  Content="Add new task" NavigateUri="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-                    <HyperlinkButton.Resources>
-                        <ResourceDictionary>
-                            <ResourceDictionary.ThemeDictionaries>
-                                <ResourceDictionary x:Key="Dark">
-                                    <SolidColorBrush x:Key="HyperlinkButtonForeground" Color="White"/>
-                                    <SolidColorBrush x:Key="HyperlinkButtonForegroundPointerOver" Color="GhostWhite"/>
-                                </ResourceDictionary>
-                            </ResourceDictionary.ThemeDictionaries>
-                        </ResourceDictionary>
-                    </HyperlinkButton.Resources>
-                    <HyperlinkButton.ContentTemplate>
-                        <DataTemplate>
-                            <TextBlock Text="{Binding}" />
-                        </DataTemplate>
-                    </HyperlinkButton.ContentTemplate>
-                </HyperlinkButton>
-                <Button.Resources>
-                    <ResourceDictionary>
-                        <ResourceDictionary.ThemeDictionaries>
-                            <ResourceDictionary x:Key="Dark">
-                                <SolidColorBrush x:Key="ButtonBackground" Color="#1F1F1F"/>
-                            </ResourceDictionary>
-                        </ResourceDictionary.ThemeDictionaries>
-                    </ResourceDictionary>
-                </Button.Resources>
-            </Button>
-        </StackPanel>
-       
-        <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Stretch">
-            <Border Height="300" Margin="15" Background="#21201F" Padding="30" CornerRadius="20">
-                <StackPanel Background="#242424" VerticalAlignment="Top">
-
-                    <ListView x:Name="TryTask">
-                        <ListView.ItemTemplate>
-                            <DataTemplate x:DataType="x:String">
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="47"/>
-                                        <ColumnDefinition/>
-                                    </Grid.ColumnDefinitions>
-                                    <Image Source="C:\Users\Arseny\Desktop\mai_dark.png" Width="32" Height="32"/>
-                                    <TextBlock Text="{x:Bind}" Foreground="WhiteSmoke" FontSize="14"
-                                Grid.Column="1"/>
-                                </Grid>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                        <x:String>Сделать BigINT</x:String>
-                        <x:String>Сделать лабу с списком</x:String>
-                        <x:String>Сделать лабу с деревом</x:String>
-                        <x:String>Допилить проект</x:String>
-                    </ListView>
-
-                </StackPanel>
-            </Border>
-        </StackPanel>
+        <ListView ItemsSource="{x:Bind Contacts}">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:Contact">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{x:Bind Path=FirstName, Mode=TwoWay}" Margin="0,0,5,0"/>
+                        <TextBlock Text="{x:Bind Path=LastName, Mode=TwoWay}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </StackPanel>
+
 </Page>
