@@ -4,8 +4,27 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:DairyApp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local1="using:Windows.ApplicationModel.Contacts"
+    
     mc:Ignorable="d">
-    <StackPanel>
-    </StackPanel>
+
+    <Grid>
+        <Grid.Resources>
+        </Grid.Resources>
+
+        <ListBox ItemsSource="{StaticResource Customers}" Width="350" Margin="0,5,0,10">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Padding="5,0,5,0"
+          Text="{Binding FirstName}" />
+                        <TextBlock Text="{Binding LastName}" />
+                        <TextBlock Text=", " />
+                        <TextBlock Text="{Binding Address}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+
 </Page>

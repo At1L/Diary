@@ -1,4 +1,5 @@
 ﻿#include "pch.h"
+#include <iostream>
 #include "TaskPage.xaml.h"
 #include "TaskClass.h"
 #if __has_include("TaskPage.g.cpp")
@@ -27,3 +28,20 @@ namespace winrt::DairyApp::implementation
         throw hresult_not_implemented();
     }
 }
+class Customer
+{
+public:
+    std::string FirstName;
+    std::string LastName;
+    std::string Address;
+
+    Customer(std::string firstName, std::string lastName, std::string address)
+    {
+        FirstName = firstName;
+        LastName = lastName;
+        Address = address;
+    }
+
+};
+
+

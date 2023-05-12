@@ -10,6 +10,7 @@ namespace winrt::DairyApp::implementation
 
         int32_t MyProperty();
         void MyProperty(int32_t value);
+        void ListBox_SelectionChanged(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::Controls::SelectionChangedEventArgs const& e);
     };
 }
 
