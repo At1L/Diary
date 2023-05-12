@@ -8,23 +8,23 @@
     
     mc:Ignorable="d">
 
-    <Grid>
-        <Grid.Resources>
-        </Grid.Resources>
 
-        <ListBox ItemsSource="{StaticResource Customers}" Width="350" Margin="0,5,0,10">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
+    
+
+    <StackPanel Background="AliceBlue">
+        <Button Content="Change" Click="OnButtonClickChange" Background="AliceBlue"/>
+
+        <ListView ItemsSource="{x:Bind Contacts}">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:Contact">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Padding="5,0,5,0"
-          Text="{Binding FirstName}" />
-                        <TextBlock Text="{Binding LastName}" />
-                        <TextBlock Text=", " />
-                        <TextBlock Text="{Binding Address}" />
+                        <TextBlock Text="{x:Bind Path=FirstName, Mode=TwoWay}" Margin="0,0,5,0"/>
+                        <TextBlock Text="{x:Bind Path=LastName, Mode=TwoWay}"/>
                     </StackPanel>
                 </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
-    </Grid>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackPanel>
+
 
 </Page>

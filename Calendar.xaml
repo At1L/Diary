@@ -14,7 +14,6 @@
     IsOutOfScopeEnabled="True"
     Language="rus"
     CalendarIdentifier="GregorianCalendar" />
-        <Button Content = "SOsu"></Button>
     </StackPanel>
 
 </Page>
