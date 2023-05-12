@@ -1,10 +1,10 @@
 #pragma once
 #include "pch.h"
-class Task
+class Task  
 {
 private:
-    std::string TaskName; 
-    std::string TaskDescription; 
+    std::string TaskName;  
+    std::string TaskDescription;  
     //date
     int day, month, year; 
     //time

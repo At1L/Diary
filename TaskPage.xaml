@@ -40,7 +40,7 @@
                 </Button.Resources>
             </Button>
         </StackPanel>
-       
+        <ItemsRepeater></ItemsRepeater>
         <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Stretch">
             <Border Height="300" Margin="15" Background="#21201F" Padding="30" CornerRadius="20">
                 <StackPanel Background="#242424" VerticalAlignment="Top">
