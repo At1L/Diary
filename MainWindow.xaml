@@ -36,6 +36,12 @@
                     <SymbolIcon Symbol="Accept"/>
                 </NavigationViewItem.Icon>
             </NavigationViewItem>
+            <NavigationViewItem Content ="Email" Tag="DairyApp.MailPage" x:Name="SamplePage5Item">
+                <NavigationViewItem.Icon>
+                    <SymbolIcon Symbol="Mail">
+                    </SymbolIcon>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
         </NavigationView.MenuItems>
         
 

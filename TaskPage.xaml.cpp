@@ -1,4 +1,5 @@
 ﻿#include "pch.h"
+#include <iostream>
 #include "TaskPage.xaml.h"
 #include "TaskClass.h"
 #include "TaskPage.xaml.g.h"
@@ -31,6 +32,7 @@ namespace winrt::DairyApp::implementation
     {
         throw hresult_not_implemented();
     }
+
 
     /*void TaskPage::AddNew_Click(winrt::Windows::Foundation::IInspectable const& sender, winrt::Microsoft::UI::Xaml::RoutedEventArgs const& e)
     {
