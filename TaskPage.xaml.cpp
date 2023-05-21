@@ -8,15 +8,17 @@
 
 #include <vector>
 #include <string>
-
+//#include "single_threaded_observable_vector.h"
 using namespace winrt;
 using namespace Microsoft::UI::Xaml;
+
+
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
 namespace winrt::DairyApp::implementation
 {
-    TaskPage::TaskPage() : mContacts(single_threaded_observable_vector<DairyApp::Contact>({ {L"Claudiu", L"HBann"}, {L"Someone", L"Else"} }))
+    TaskPage::TaskPage() : mContacts(single_threaded_observable_vector<DairyApp::Contact>())
     {
         InitializeComponent();
     }
@@ -38,10 +40,21 @@ namespace winrt::DairyApp::implementation
     void TaskPage::OnButtonClickChange(IInspectable const& /*sender*/,
         Microsoft::UI::Xaml::RoutedEventArgs const& /*e*/)
     {
-        for (auto contact : Contacts())
+        Contacts().Append({ Text_add().Text(), Text_add().Text() });
+    }
+
+    void TaskPage::OnButtonClickDeleteLast(IInspectable const& /*sender*/,
+        Microsoft::UI::Xaml::RoutedEventArgs const& /*e*/)
+    {
+        if (Contacts().Size() > 0)
         {
-            contact.LastName(contact.LastName() + L" " + contact.LastName());
+            Contacts().RemoveAtEnd();
         }
+    }
+
+    void TaskPage::Contacts(IObservableVector<DairyApp::Contact>& Cont)
+    {
+        mContacts = Cont;
     }
 
     Windows::Foundation::Collections::IObservableVector<DairyApp::Contact> TaskPage::Contacts()
@@ -84,4 +97,3 @@ namespace winrt::DairyApp::implementation
 //
 //    void ItemsSource(IInspectable Contact);
 //}
->>>>>>> 15062efd9c4772fe358ae0eb0e3f63e7985cbb83
