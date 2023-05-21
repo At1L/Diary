@@ -1,3 +1,5 @@
+import "Contact.idl";
+
 namespace DairyApp
 {
     [default_interface]
@@ -5,5 +7,7 @@ namespace DairyApp
     {
         TaskPage();
         Int32 MyProperty;
+
+        Windows.Foundation.Collections.IObservableVector<Contact> Contacts{ get; };
     }
 }

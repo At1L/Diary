@@ -1,0 +1,10 @@
+namespace DairyApp
+{
+    runtimeclass Contact : Microsoft.UI.Xaml.Data.INotifyPropertyChanged
+    {
+        Contact(String firstName, String lastName);
+
+        String FirstName;
+        String LastName;
+    }
+}
