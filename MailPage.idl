@@ -1,0 +1,9 @@
+namespace DairyApp
+{
+    [default_interface]
+    runtimeclass MailPage : Microsoft.UI.Xaml.Controls.Page
+    {
+        MailPage();
+        Int32 MyProperty;
+    }
+}
